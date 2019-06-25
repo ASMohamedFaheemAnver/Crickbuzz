@@ -2,17 +2,28 @@ package com.company;
 
 
 import com.company.Crickbuzzpage.CrickbuzzPage;
+import com.company.Crickbuzzpage.DefaultCrickbuzzPage;
 import com.company.Crickbuzzpage.FirstInningsPage;
+import com.company.Repository.DatabaseRepository;
+import com.company.Repository.Repository;
 
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import static javax.swing.UIManager.getString;
 
 public class Test {
 
+
+
     public static void main(String[] args) {
-        JFrame  jf = new JFrame();
-        CrickbuzzPage x = new FirstInningsPage(jf);
-        x.Display();
+        JFrame jj = new JFrame();
+        Repository x = new DatabaseRepository();
+        ResultSet res = x.read("SELECT * FROM `Match` WHERE 1");
+        CrickbuzzPage xxx = new FirstInningsPage(jj, res);
+        xxx.Display();
     }
 }

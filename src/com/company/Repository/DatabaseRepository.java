@@ -2,24 +2,20 @@ package com.company.Repository;
 
 import java.sql.*;
 
-public class DatabaseRepository {
-    Connection sqlcon;
-    Statement sqlst;
-    ResultSet sqlrs;
+public class DatabaseRepository implements Repository{
 
-    public DatabaseRepository(){
-        try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            sqlcon = DriverManager.getConnection("jdbc:mysql://localhost:3306/test", "root", "");
-            System.out.println("Done!");
-        }catch (ClassNotFoundException ex){
-            ex.printStackTrace();
+    @Override
+    public ResultSet read(String quary) {
+        ResultSet sqlres = null;
+        try{
+            SqlConnector con = new SqlConnector();
+            Connection sqlcon = con.ConnectToSql();
+            PreparedStatement sqlstat = con.sqlcon.prepareStatement(quary);
+            sqlres = sqlstat.executeQuery();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-    }
 
-    public static void main(String[] args){
-        DatabaseRepository connect = new DatabaseRepository();
+        return sqlres;
     }
 }

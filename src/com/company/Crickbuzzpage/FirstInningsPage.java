@@ -1,8 +1,11 @@
 package com.company.Crickbuzzpage;
 
+import net.proteanit.sql.DbUtils;
+
 import javax.swing.*;
 
 import java.awt.*;
+import java.sql.ResultSet;
 
 
 public class FirstInningsPage implements CrickbuzzPage{
@@ -10,12 +13,14 @@ public class FirstInningsPage implements CrickbuzzPage{
     JTable firstBattingtable;
 
     private JLabel titleofFirstInnings = new JLabel();
+    ResultSet rsfirstInnings;
 
 
 
 
-    public FirstInningsPage(JFrame firstInningsFrame){
+    public FirstInningsPage(JFrame firstInningsFrame, ResultSet rsfirstInnings){
         this.firstInningsFrame = firstInningsFrame;
+        this.rsfirstInnings = rsfirstInnings;
     }
 
 
@@ -49,6 +54,8 @@ public class FirstInningsPage implements CrickbuzzPage{
         firstInningsFrame.setSize(1920, 1050);
         firstInningsFrame.setLayout(null);
         firstInningsFrame.setVisible(true);
+
+        firstBattingtable.setModel(DbUtils.resultSetToTableModel(rsfirstInnings));
     }
 
 
