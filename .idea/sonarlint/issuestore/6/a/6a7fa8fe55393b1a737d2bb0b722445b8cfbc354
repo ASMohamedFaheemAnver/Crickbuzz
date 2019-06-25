@@ -1,11 +1,0 @@
-
-Msquid:S1172>"*Remove this unused method parameter "evt".(‘ òôøÿÿÿÿ8Ñ£ˆ˜¸-
-Ksquid:S1604^"(Make this anonymous inner class a lambda(¨í¡§úÿÿÿÿ8Ñ£ˆ˜¸-
-usquid:S1450f"WRemove the "jButton1" field and declare it as a local variable in the relevant methods.(å……¶8Ñ£ˆ˜¸-
-bsquid:S2147T"DCombine this catch with the one at line 82, which has the same body.(¨¦Š½8† Š˜¸-
-Usquid:S1135?"2Complete the task associated to this TODO comment.(ÜÀ†áûÿÿÿÿ8Ñ£ˆ˜¸-
-Ksquid:S1604$"(Make this anonymous inner class a lambda(…æ©âÿÿÿÿÿ8Ñ£ˆ˜¸-
-[squid:S1197E"8Move the array designator from the variable to the type.(¡şÏÖøÿÿÿÿ8Ñ£ˆ˜¸-
-bsquid:S2147V"DCombine this catch with the one at line 82, which has the same body.(ã€ 8²îŠ˜¸-
-asquid:S2147X"DCombine this catch with the one at line 82, which has the same body.(ñÎ¯%8Šš‹˜¸-
-qsquid:MaximumInheritanceDepth"<This class has 6 parents which is greater than 5 authorized.(å¡¤£ÿÿÿÿÿ8Ñ£ˆ˜¸-
