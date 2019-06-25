@@ -4,78 +4,26 @@ import javax.swing.*;
 import java.awt.*;
 
 public class DefaultCrickbuzzPage implements CrickbuzzPage{
-    public static JFrame defaultFrame = new JFrame();
-    public static JLabel userGreeting = new JLabel();
-    public JLabel searchInstruction = new JLabel();
-    public JTextField searchText = new JTextField("");
-    public JButton searchButton = new JButton("Search");
-    public JRadioButton previewInnings = new JRadioButton("Innings Preview");
-    public JRadioButton firstInnings = new JRadioButton("First Innings");
-    public JRadioButton secondInnings = new JRadioButton("Second Innings");
-    public ButtonGroup selectionInnings = new ButtonGroup();
+    final JButton searchButton = new JButton("Search");
+    final JRadioButton previewInnings = new JRadioButton("Innings Preview");
+    final JRadioButton firstInnings = new JRadioButton("First Innings");
+    final JRadioButton secondInnings = new JRadioButton("Second Innings");
+    final ButtonGroup selectionInnings = new ButtonGroup();
 
-    @Override
-    public void disableuserGreeting(boolean choice){
-        if (choice==true){
-            userGreeting.setVisible(false);
-        }else {
-            userGreeting.setVisible(true);
-        }
+    private JFrame defaultFrame;
+
+    static JLabel userGreeting = new JLabel();
+    static JLabel searchInstruction = new JLabel();
+    static JTextField searchText = new JTextField("");
+
+    public DefaultCrickbuzzPage(JFrame defaultFrame){
+        this.defaultFrame = defaultFrame;
     }
 
-    @Override
-    public void searchInstruction(boolean choice) {
-        if (choice==true){
-            searchInstruction.setVisible(false);
-        }else {
-            searchInstruction.setVisible(true);
-        }
+    public void chanLabel(String str){
+
     }
 
-    @Override
-    public void searchText(boolean choice) {
-        if (choice==true){
-            searchText.setVisible(false);
-        }else {
-            searchText.setVisible(true);
-        }
-    }
-
-    @Override
-    public void searchButton(boolean choice) {
-        if (choice==true){
-            searchButton.setVisible(false);
-        }else {
-            searchButton.setVisible(true);
-        }
-    }
-
-    @Override
-    public void previewInnings(boolean choice) {
-        if (choice==true){
-            previewInnings.setVisible(false);
-        }else {
-            previewInnings.setVisible(true);
-        }
-    }
-
-    @Override
-    public void firstInnings(boolean choice) {
-        if (choice==true){
-            firstInnings.setVisible(false);
-        }else {
-            firstInnings.setVisible(true);
-        }
-    }
-
-    @Override
-    public void secondInnings(boolean choice) {
-        if (choice==true){
-            secondInnings.setVisible(false);
-        }else {
-            secondInnings.setVisible(true);
-        }
-    }
 
     @Override
     public void Display() {
@@ -88,23 +36,46 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
         firstInnings.setBounds(770, 250, 150, 40);
         secondInnings.setBounds(970, 250, 150, 40);
         previewInnings.setBounds(1170, 250, 150, 40);
-        selectionInnings.add(firstInnings);
-        selectionInnings.add(secondInnings);
-        selectionInnings.add(previewInnings);
 
-        defaultFrame.add(firstInnings);
-        defaultFrame.add(secondInnings);
-        defaultFrame.add(previewInnings);
 
         userGreeting.setFont(new Font("Serif", Font.BOLD, 25));
 
+        selectionInnings.add(firstInnings);
+        selectionInnings.add(secondInnings);
+        selectionInnings.add(previewInnings);
+        defaultFrame.add(firstInnings);
+        defaultFrame.add(secondInnings);
+        defaultFrame.add(previewInnings);
         defaultFrame.add(userGreeting);
         defaultFrame.add(searchInstruction);
         defaultFrame.add(searchButton);
         defaultFrame.add(searchText);
 
+
         defaultFrame.setSize(1920, 1050);
         defaultFrame.setLayout(null);
         defaultFrame.setVisible(true);
+    }
+
+    @Override
+    public void ClearResult() {
+        firstInnings.setVisible(false);
+        secondInnings.setVisible(false);
+        previewInnings.setVisible(false);
+        userGreeting.setVisible(false);
+        searchInstruction.setVisible(false);
+        searchButton.setVisible(false);
+        searchText.setVisible(false);
+    }
+
+    @Override
+    public void ShowResult() {
+        firstInnings.setVisible(true);
+        secondInnings.setVisible(true);
+        previewInnings.setVisible(true);
+        userGreeting.setVisible(true);
+        searchInstruction.setVisible(true);
+        searchButton.setVisible(true);
+        searchText.setVisible(true);
     }
 }

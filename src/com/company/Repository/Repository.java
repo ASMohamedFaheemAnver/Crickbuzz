@@ -1,4 +1,7 @@
 package com.company.Repository;
 
-public interface Repository {
+import java.sql.ResultSet;
+
+public interface Repository{
+    ResultSet read();
 }
