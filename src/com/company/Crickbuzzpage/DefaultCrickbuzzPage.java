@@ -58,24 +58,8 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
     }
 
     @Override
-    public void ClearResult() {
-        firstInnings.setVisible(false);
-        secondInnings.setVisible(false);
-        previewInnings.setVisible(false);
-        userGreeting.setVisible(false);
-        searchInstruction.setVisible(false);
-        searchButton.setVisible(false);
-        searchText.setVisible(false);
+    public boolean IsNextPageClicked() {
+        return false;
     }
 
-    @Override
-    public void ShowResult() {
-        firstInnings.setVisible(true);
-        secondInnings.setVisible(true);
-        previewInnings.setVisible(true);
-        userGreeting.setVisible(true);
-        searchInstruction.setVisible(true);
-        searchButton.setVisible(true);
-        searchText.setVisible(true);
-    }
 }

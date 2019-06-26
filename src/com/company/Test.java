@@ -22,8 +22,9 @@ public class Test {
     public static void main(String[] args) {
         JFrame jj = new JFrame();
         Repository x = new DatabaseRepository();
-        ResultSet res = x.read("SELECT * FROM `Match` WHERE 1");
-        CrickbuzzPage xxx = new FirstInningsPage(jj, res);
+        ResultSet res = x.read("SELECT NAME, RUN, BALL, FOUR, SIX, SR FROM `MATCHBATTING` WHERE 1");
+        CrickbuzzPage xxx = new FirstInningsPage(jj, res, res);
         xxx.Display();
+        boolean xl = xxx.IsNextPageClicked();
     }
 }
