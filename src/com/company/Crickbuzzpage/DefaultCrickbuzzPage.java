@@ -2,6 +2,8 @@ package com.company.Crickbuzzpage;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class DefaultCrickbuzzPage implements CrickbuzzPage{
     final JButton searchButton = new JButton("Search");
@@ -9,6 +11,8 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
     final JRadioButton firstInnings = new JRadioButton("First Innings");
     final JRadioButton secondInnings = new JRadioButton("Second Innings");
     final ButtonGroup selectionInnings = new ButtonGroup();
+
+    private boolean isNext = false;
 
     private JFrame defaultFrame;
 
@@ -58,8 +62,16 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
     }
 
     @Override
-    public boolean IsNextPageClicked() {
-        return false;
+    public boolean IsButtonClicked() {
+        searchButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                isNext = true;
+                System.out.println(isNext);
+            }
+        });
+        return isNext;
     }
 
 }

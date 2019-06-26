@@ -23,8 +23,9 @@ public class Test {
         JFrame jj = new JFrame();
         Repository x = new DatabaseRepository();
         ResultSet res = x.read("SELECT NAME, RUN, BALL, FOUR, SIX, SR FROM `MATCHBATTING` WHERE 1");
-        CrickbuzzPage xxx = new FirstInningsPage(jj, res, res);
+        ResultSet res2 = x.read("SELECT NAME, MOVER, RUN, MAIDEN, WICKET, ECON FROM `MATCHBOWLING` WHERE 1");
+        CrickbuzzPage xxx = new FirstInningsPage(jj, res, res2);
         xxx.Display();
-        boolean xl = xxx.IsNextPageClicked();
+        boolean xl = xxx.IsButtonClicked();
     }
 }

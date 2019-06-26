@@ -45,7 +45,7 @@ public class FirstInningsPage implements CrickbuzzPage{
         titleofFirstInnings.setBounds(650, 0, 700, 100);
         titleofFirstInningsBatting.setBounds(370, 150, 900, 40);
         titleofFirstInningsBowling.setBounds(1290, 150, 900, 40);
-        firstInningsDone.setBounds(1650, 950, 100, 40);
+        firstInningsDone.setBounds(1690, 950, 100, 40);
 
         titleofFirstInnings.setFont(new Font("Serif", Font.BOLD, 25));
         titleofFirstInningsBatting.setFont(new Font(titleofFirstInningsBatting.getFont().toString(), Font.BOLD, 20));
@@ -97,10 +97,11 @@ public class FirstInningsPage implements CrickbuzzPage{
         firstInningsFrame.setVisible(true);
 
         firstBattingtable.setModel(DbUtils.resultSetToTableModel(rsfirstInningsBatting));
+        firstBowlingtable.setModel(DbUtils.resultSetToTableModel(rsFirstInningsBowling));
     }
 
     @Override
-    public boolean IsNextPageClicked() {
+    public boolean IsButtonClicked() {
         firstInningsDone.addActionListener(new ActionListener() {
 
             @Override
