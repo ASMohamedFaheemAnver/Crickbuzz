@@ -11,10 +11,9 @@ import java.sql.ResultSet;
 
 
 public class FirstInningsPage implements CrickbuzzPage{
-    JFrame firstInningsFrame;
+    JFrame firstInningsFrame = new JFrame();
     JTable firstBattingtable;
     JTable firstBowlingtable;
-    private boolean isNext = false;
 
     private JLabel titleofFirstInnings = new JLabel();
     private JLabel titleofFirstInningsBatting = new JLabel();
@@ -26,8 +25,7 @@ public class FirstInningsPage implements CrickbuzzPage{
 
 
 
-    public FirstInningsPage(JFrame firstInningsFrame, ResultSet rsfirstInningsBatting, ResultSet rsFirstInningsBowling){
-        this.firstInningsFrame = firstInningsFrame;
+    public FirstInningsPage(ResultSet rsfirstInningsBatting, ResultSet rsFirstInningsBowling){
         this.rsfirstInningsBatting = rsfirstInningsBatting;
         this.rsFirstInningsBowling = rsFirstInningsBowling;
     }
@@ -98,19 +96,17 @@ public class FirstInningsPage implements CrickbuzzPage{
 
         firstBattingtable.setModel(DbUtils.resultSetToTableModel(rsfirstInningsBatting));
         firstBowlingtable.setModel(DbUtils.resultSetToTableModel(rsFirstInningsBowling));
-    }
 
-    @Override
-    public boolean IsButtonClicked() {
         firstInningsDone.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                isNext = true;
-                System.out.println(isNext);
+                JFrame defaultFrame = new JFrame();
+                CrickbuzzPage defaultPage = new DefaultCrickbuzzPage(defaultFrame);
+                firstInningsFrame.setVisible(false);
+                defaultPage.Display();
             }
         });
-        return isNext;
     }
 
 }

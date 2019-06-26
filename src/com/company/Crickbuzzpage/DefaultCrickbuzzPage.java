@@ -59,19 +59,12 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
         defaultFrame.setSize(1920, 1050);
         defaultFrame.setLayout(null);
         defaultFrame.setVisible(true);
-    }
-
-    @Override
-    public boolean IsButtonClicked() {
         searchButton.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                isNext = true;
-                System.out.println(isNext);
             }
         });
-        return isNext;
     }
 
 }
