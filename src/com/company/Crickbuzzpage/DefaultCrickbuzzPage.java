@@ -7,22 +7,18 @@ import java.awt.event.ActionListener;
 
 public class DefaultCrickbuzzPage implements CrickbuzzPage{
     final JButton searchButton = new JButton("Search");
-    final JRadioButton previewInnings = new JRadioButton("Innings Preview");
+    final JRadioButton previewInnings = new JRadioButton("Innings Overview");
     final JRadioButton firstInnings = new JRadioButton("First Innings");
     final JRadioButton secondInnings = new JRadioButton("Second Innings");
     final ButtonGroup selectionInnings = new ButtonGroup();
 
     private boolean isNext = false;
 
-    private JFrame defaultFrame;
+    private JFrame defaultFrame = new JFrame();
 
     static JLabel userGreeting = new JLabel();
     static JLabel searchInstruction = new JLabel();
     static JTextField searchText = new JTextField("");
-
-    public DefaultCrickbuzzPage(JFrame defaultFrame){
-        this.defaultFrame = defaultFrame;
-    }
 
     public void chanLabel(String str){
 
@@ -63,6 +59,7 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
 
             @Override
             public void actionPerformed(ActionEvent e) {
+
             }
         });
     }

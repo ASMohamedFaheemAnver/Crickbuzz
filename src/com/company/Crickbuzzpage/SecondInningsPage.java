@@ -100,8 +100,7 @@ public class SecondInningsPage implements CrickbuzzPage{
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame defaultFrame = new JFrame();
-                CrickbuzzPage defaultPage = new DefaultCrickbuzzPage(defaultFrame);
+                CrickbuzzPage defaultPage = new DefaultCrickbuzzPage();
                 secondInningsFrame.setVisible(false);
                 defaultPage.Display();
 

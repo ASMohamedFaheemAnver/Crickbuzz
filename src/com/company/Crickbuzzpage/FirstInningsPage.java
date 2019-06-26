@@ -98,11 +98,9 @@ public class FirstInningsPage implements CrickbuzzPage{
         firstBowlingtable.setModel(DbUtils.resultSetToTableModel(rsFirstInningsBowling));
 
         firstInningsDone.addActionListener(new ActionListener() {
-
             @Override
             public void actionPerformed(ActionEvent e) {
-                JFrame defaultFrame = new JFrame();
-                CrickbuzzPage defaultPage = new DefaultCrickbuzzPage(defaultFrame);
+                CrickbuzzPage defaultPage = new DefaultCrickbuzzPage();
                 firstInningsFrame.setVisible(false);
                 defaultPage.Display();
             }
