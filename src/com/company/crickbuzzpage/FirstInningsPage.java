@@ -2,9 +2,14 @@ package com.company.crickbuzzpage;
 
 import net.proteanit.sql.DbUtils;
 
-import javax.swing.*;
+import javax.swing.JFrame;
+import javax.swing.JTable;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JScrollPane;
 
-import java.awt.*;
+
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
@@ -32,7 +37,7 @@ public class FirstInningsPage implements CrickbuzzPage{
 
 
     @Override
-    public void Display() {
+    public void display() {
         titleofFirstInnings.setText("FIRST INNINGS SCORECARD!");
         titleofFirstInningsBatting.setText("FIRST INNINGS BATTING!");
         titleofFirstInningsBowling.setText("FIRST INNINGS BOWLING!");
@@ -57,8 +62,8 @@ public class FirstInningsPage implements CrickbuzzPage{
         firstBattingtable = new JTable();
         firstBowlingtable = new JTable();
 
-        String battingColumn[]={"NAME","RUN","BALL", "SIX", "FOUR", "S/R"};
-        String bowlingColoumn[]={"NAME", "OVER", "MAIDEN", "RUN", "WICKET", "ECON"};
+        String[] battingColumn = {"NAME","RUN","BALL", "SIX", "FOUR", "S/R"};
+        String[] bowlingColoumn = {"NAME", "OVER", "MAIDEN", "RUN", "WICKET", "ECON"};
 
         firstBattingtable.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [][] {
@@ -105,7 +110,7 @@ public class FirstInningsPage implements CrickbuzzPage{
             public void actionPerformed(ActionEvent e) {
                 CrickbuzzPage defaultPage = new DefaultCrickbuzzPage();
                 firstInningsFrame.setVisible(false);
-                defaultPage.Display();
+                defaultPage.display();
             }
         });
     }

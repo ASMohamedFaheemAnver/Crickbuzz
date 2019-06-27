@@ -8,8 +8,11 @@ import java.sql.ResultSet;
 public class OperationFactory{
     public Operation getInstance(String operator, int matchID){
         Repository data = new DatabaseRepository();
-        ResultSet rsfirstInningsBatting, rsfirstInningsBowling, rssecondInningsBatting,
-                rssecondInningsBowling, rsmatchOverview;
+        ResultSet rsfirstInningsBatting;
+        ResultSet rsfirstInningsBowling;
+        ResultSet rssecondInningsBatting;
+        ResultSet rssecondInningsBowling;
+        ResultSet rsmatchOverview;
 
         Operation operation = null;
         if ("First Innings".equals(operator)){

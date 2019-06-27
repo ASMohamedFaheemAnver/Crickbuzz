@@ -15,6 +15,6 @@ public class OverviewInningsOperation implements Operation{
     @Override
     public void perform() {
         CrickbuzzPage overviewMatch = new OverviewInningsPage(rspreviewInnings);
-        overviewMatch.Display();
+        overviewMatch.display();
     }
 }

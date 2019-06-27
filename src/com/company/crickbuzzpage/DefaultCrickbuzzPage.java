@@ -5,14 +5,21 @@ package com.company.crickbuzzpage;
 import com.company.operation.Operation;
 import com.company.operation.OperationFactory;
 
-import javax.swing.*;
-import java.awt.*;
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+import javax.swing.ButtonGroup;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class DefaultCrickbuzzPage implements CrickbuzzPage{
     final JButton searchButton = new JButton("Search");
-    final JRadioButton InningsOverview = new JRadioButton("Innings Overview");
+    final JRadioButton inningsOverview = new JRadioButton("Innings Overview");
     final JRadioButton firstInnings = new JRadioButton("First Innings");
     final JRadioButton secondInnings = new JRadioButton("Second Innings");
     final ButtonGroup selectionInnings = new ButtonGroup();
@@ -26,7 +33,7 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
 
 
     @Override
-    public void Display() {
+    public void display() {
         userGreeting.setText("WELCOME TO THE AWESOME CRICKBUZZ!");
         searchInstruction.setText("Enter Match ID : ");
         userGreeting.setBounds(650, 0, 700, 100);
@@ -35,9 +42,9 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
         searchButton.setBounds(1350, 250, 100, 40);
         firstInnings.setBounds(770, 250, 150, 40);
         secondInnings.setBounds(970, 250, 150, 40);
-        InningsOverview.setBounds(1170, 250, 150, 40);
+        inningsOverview.setBounds(1170, 250, 150, 40);
 
-        InningsOverview.setActionCommand("Innings Overview");
+        inningsOverview.setActionCommand("Innings Overview");
         firstInnings.setActionCommand("First Innings");
         secondInnings.setActionCommand("Second Innings");
 
@@ -45,10 +52,10 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
 
         selectionInnings.add(firstInnings);
         selectionInnings.add(secondInnings);
-        selectionInnings.add(InningsOverview);
+        selectionInnings.add(inningsOverview);
         defaultFrame.add(firstInnings);
         defaultFrame.add(secondInnings);
-        defaultFrame.add(InningsOverview);
+        defaultFrame.add(inningsOverview);
         defaultFrame.add(userGreeting);
         defaultFrame.add(searchInstruction);
         defaultFrame.add(searchButton);

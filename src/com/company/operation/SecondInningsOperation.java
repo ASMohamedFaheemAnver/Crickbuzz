@@ -18,6 +18,6 @@ public class SecondInningsOperation implements Operation{
     @Override
     public void perform() {
         CrickbuzzPage firstInnings = new SecondInningsPage(rsfirstInningsBatting, rsfirstInningsBowling);
-        firstInnings.Display();
+        firstInnings.display();
     }
 }

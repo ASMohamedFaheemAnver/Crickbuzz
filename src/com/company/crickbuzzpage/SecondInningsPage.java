@@ -2,8 +2,15 @@ package com.company.crickbuzzpage;
 
 import net.proteanit.sql.DbUtils;
 
-import javax.swing.*;
-import java.awt.*;
+
+import javax.swing.JFrame;
+import javax.swing.JTable;
+import javax.swing.JLabel;
+import javax.swing.JButton;
+import javax.swing.JScrollPane;
+
+
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.ResultSet;
@@ -12,7 +19,6 @@ public class SecondInningsPage implements CrickbuzzPage{
     JFrame secondInningsFrame = new JFrame();
     JTable secondBattingtable;
     JTable secondBowlingtable;
-    private boolean isNext = false;
 
     private JLabel titleofsecondInnings = new JLabel();
     private JLabel titleofsecondInningsBatting = new JLabel();
@@ -31,7 +37,7 @@ public class SecondInningsPage implements CrickbuzzPage{
 
 
     @Override
-    public void Display() {
+    public void display() {
         titleofsecondInnings.setText("SECOND INNINGS SCORECARD!");
         titleofsecondInningsBatting.setText("SECOND INNINGS BATTING!");
         titleofsecondInningsBowling.setText("SECOND INNINGS BOWLING!");
@@ -56,8 +62,8 @@ public class SecondInningsPage implements CrickbuzzPage{
         secondBattingtable = new JTable();
         secondBowlingtable = new JTable();
 
-        String battingColumn[]={"NAME","RUN","BALL", "SIX", "FOUR", "S/R"};
-        String bowlingColoumn[]={"NAME", "OVER", "MAIDEN", "RUN", "WICKET", "ECON"};
+        String[] battingColumn = {"NAME","RUN","BALL", "SIX", "FOUR", "S/R"};
+        String[] bowlingColoumn = {"NAME", "OVER", "MAIDEN", "RUN", "WICKET", "ECON"};
 
         secondBattingtable.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [][] {
@@ -105,7 +111,7 @@ public class SecondInningsPage implements CrickbuzzPage{
             public void actionPerformed(ActionEvent e) {
                 CrickbuzzPage defaultPage = new DefaultCrickbuzzPage();
                 secondInningsFrame.setVisible(false);
-                defaultPage.Display();
+                defaultPage.display();
 
             }
         });
