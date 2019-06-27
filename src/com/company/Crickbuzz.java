@@ -1,7 +1,7 @@
 package com.company;
 
-import com.company.Crickbuzzpage.CrickbuzzPage;
-import com.company.Crickbuzzpage.DefaultCrickbuzzPage;
+import com.company.crickbuzzpage.CrickbuzzPage;
+import com.company.crickbuzzpage.DefaultCrickbuzzPage;
 
 public class Crickbuzz {
     public static void main(String[] args) {
