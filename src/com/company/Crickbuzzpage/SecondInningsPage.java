@@ -77,8 +77,11 @@ public class SecondInningsPage implements CrickbuzzPage{
                 bowlingColoumn
         ));
 
-        secondBattingtable.setBounds(70, 200, 800, 700);
-        secondBowlingtable.setBounds(990, 200, 800, 700);
+        secondBattingtable.setRowHeight(60);
+        secondBowlingtable.setRowHeight(60);
+
+        secondBattingtable.setBounds(70, 200, 800, 622);
+        secondBowlingtable.setBounds(990, 200, 800, 322);
 
 
         JScrollPane sp = new JScrollPane(secondBattingtable);

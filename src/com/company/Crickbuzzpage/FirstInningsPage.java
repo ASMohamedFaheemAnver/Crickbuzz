@@ -78,8 +78,11 @@ public class FirstInningsPage implements CrickbuzzPage{
                 bowlingColoumn
         ));
 
-        firstBattingtable.setBounds(70, 200, 800, 700);
-        firstBowlingtable.setBounds(990, 200, 800, 700);
+        firstBattingtable.setRowHeight(60);
+        firstBowlingtable.setRowHeight(60);
+
+        firstBattingtable.setBounds(70, 200, 800, 622);
+        firstBowlingtable.setBounds(990, 200, 800, 322);
 
 
         JScrollPane sp = new JScrollPane(firstBattingtable);

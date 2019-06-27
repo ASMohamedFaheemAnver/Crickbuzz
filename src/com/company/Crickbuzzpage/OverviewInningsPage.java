@@ -28,7 +28,7 @@ public class OverviewInningsPage implements CrickbuzzPage{
 
         titleofoverviewInnings.setBounds(800, 0, 400, 100);
         matchTitle.setBounds(760, 200, 400, 200);
-        matchOverview.setBounds(600, 300, 800, 300);
+        matchOverview.setBounds(600, 400, 800, 300);
 
         titleofoverviewInnings.setFont(new Font("Serif", Font.BOLD, 25));
 
