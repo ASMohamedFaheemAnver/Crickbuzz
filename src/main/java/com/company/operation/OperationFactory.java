@@ -32,7 +32,7 @@ public class OperationFactory{
             rsmatchOverview = data.read(qr);
             operation = new OverviewInningsOperation(rsmatchOverview);
         }else{
-            operation = new DefaultPageOperation();
+            operation = new DefaultOperation();
         }
 
 

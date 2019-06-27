@@ -4,7 +4,7 @@ import main.java.com.company.crickbuzzpage.CrickbuzzPage;
 import main.java.com.company.crickbuzzpage.DefaultCrickbuzzPage;
 
 
-public class DefaultPageOperation implements Operation{
+public class DefaultOperation implements Operation{
     @Override
     public void perform() {
         CrickbuzzPage firstInnings = new DefaultCrickbuzzPage();
