@@ -1,4 +1,4 @@
-package main.java.com.company.crickbuzzpage;
+package com.company.crickbuzzpage;
 
 import net.proteanit.sql.DbUtils;
 

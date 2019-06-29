@@ -1,9 +1,9 @@
-package main.java.com.company.crickbuzzpage;
+package com.company.crickbuzzpage;
 
 
 
-import main.java.com.company.operation.Operation;
-import main.java.com.company.operation.OperationFactory;
+import com.company.operation.Operation;
+import com.company.operation.OperationFactory;
 
 import javax.swing.JFrame;
 import javax.swing.JRadioButton;

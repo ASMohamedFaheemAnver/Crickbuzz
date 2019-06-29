@@ -1,6 +1,5 @@
-package test.java.com.company.operation;
+package com.company.operation;
 
-import main.java.com.company.operation.*;
 import org.junit.Test;
 
 import static org.hamcrest.CoreMatchers.instanceOf;

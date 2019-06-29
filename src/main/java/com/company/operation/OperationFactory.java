@@ -1,7 +1,7 @@
-package main.java.com.company.operation;
+package com.company.operation;
 
-import main.java.com.company.repository.DatabaseRepository;
-import main.java.com.company.repository.Repository;
+import com.company.repository.DatabaseRepository;
+import com.company.repository.Repository;
 
 import java.sql.ResultSet;
 

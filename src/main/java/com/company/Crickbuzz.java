@@ -1,7 +1,7 @@
-package main.java.com.company;
+package com.company;
 
-import main.java.com.company.crickbuzzpage.CrickbuzzPage;
-import main.java.com.company.crickbuzzpage.DefaultCrickbuzzPage;
+import com.company.crickbuzzpage.CrickbuzzPage;
+import com.company.crickbuzzpage.DefaultCrickbuzzPage;
 
 public class Crickbuzz {
     public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package main.java.com.company.operation;
+package com.company.operation;
 
-import main.java.com.company.crickbuzzpage.CrickbuzzPage;
-import main.java.com.company.crickbuzzpage.FirstInningsPage;
+import com.company.crickbuzzpage.CrickbuzzPage;
+import com.company.crickbuzzpage.FirstInningsPage;
 
 import java.sql.ResultSet;
 

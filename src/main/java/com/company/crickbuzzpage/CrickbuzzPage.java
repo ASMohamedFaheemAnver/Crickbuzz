@@ -1,4 +1,4 @@
-package main.java.com.company.crickbuzzpage;
+package com.company.crickbuzzpage;
 
 
 public interface CrickbuzzPage {
