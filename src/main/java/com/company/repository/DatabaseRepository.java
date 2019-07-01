@@ -1,6 +1,7 @@
 package com.company.repository;
 
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -19,8 +20,10 @@ public class DatabaseRepository implements Repository{
             sqlres = sqlstat.executeQuery();
         } catch (SQLException e) {
             e.getMessage();
+            JOptionPane.showMessageDialog(null, "THERE WAS AN SQL EXCEPTION!");
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null, "   CAN'T CONNECT TO THE DATABASE!");
         }
-
         return sqlres;
     }
 }
