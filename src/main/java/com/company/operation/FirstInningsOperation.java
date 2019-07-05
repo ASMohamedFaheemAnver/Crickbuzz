@@ -6,7 +6,7 @@ import com.company.crickbuzzpage.InningsPage;
 import java.sql.ResultSet;
 
 
-public class FirstInningsOperation implements Operation{
+public class FirstInningsOperation implements VoidOperation{
     private ResultSet rsfirstInningsBatting;
     private ResultSet rsfirstInningsBowling;
     private String[] battingColumn = {"","","", "", "", ""};

@@ -14,7 +14,7 @@ public class OperationFactoryTest {
         operator = "-1";
         matchID = 1;
 
-        Operation operation = operationFactory.getInstance(operator, matchID);
+        VoidOperation operation = operationFactory.getInstance(operator, matchID);
         assertThat(operation, instanceOf(DefaultOperation.class));
     }
 
@@ -24,7 +24,7 @@ public class OperationFactoryTest {
         operator = "First Innings";
         matchID = 1;
 
-        Operation operation = operationFactory.getInstance(operator, matchID);
+        VoidOperation operation = operationFactory.getInstance(operator, matchID);
         assertThat(operation, instanceOf(FirstInningsOperation.class));
     }
 
@@ -34,7 +34,7 @@ public class OperationFactoryTest {
         operator = "Second Innings";
         matchID = 1;
 
-        Operation operation = operationFactory.getInstance(operator, matchID);
+        VoidOperation operation = operationFactory.getInstance(operator, matchID);
         assertThat(operation, instanceOf(SecondInningsOperation.class));
     }
 
@@ -44,7 +44,7 @@ public class OperationFactoryTest {
         operator = "Innings Overview";
         matchID = 1;
 
-        Operation operation = operationFactory.getInstance(operator, matchID);
+        VoidOperation operation = operationFactory.getInstance(operator, matchID);
         assertThat(operation, instanceOf(OverviewInningsOperation.class));
     }
 }

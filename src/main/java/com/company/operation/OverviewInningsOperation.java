@@ -5,7 +5,7 @@ import com.company.crickbuzzpage.OverviewInningsPage;
 
 import java.sql.ResultSet;
 
-public class OverviewInningsOperation implements Operation{
+public class OverviewInningsOperation implements VoidOperation{
     ResultSet rspreviewInnings;
 
     public OverviewInningsOperation(ResultSet rspreviewInnings){

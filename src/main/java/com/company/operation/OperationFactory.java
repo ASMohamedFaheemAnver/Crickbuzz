@@ -6,13 +6,13 @@ import com.company.repository.Repository;
 import java.sql.ResultSet;
 
 public class OperationFactory{
-    public Operation getInstance(String operator, int matchID){
+    public VoidOperation getInstance(String operator, int matchID){
         Repository data = new DatabaseRepository();
         ResultSet rsInningsBatting;
         ResultSet rsInningsBowling;
         ResultSet rsmatchOverview;
 
-        Operation operation = null;
+        VoidOperation operation = null;
         if ("First Innings".equals(operator)){
             String qr = "SELECT NAME, RUN, BALL, FOUR, SIX, SR FROM `MATCHBATTING` WHERE MATCHID = " + matchID + " AND INNINGS = \"FIRST\"";
             String qr2 = "SELECT NAME, MOVER, MAIDEN, RUN, WICKET, ECON FROM `MATCHBOWLING` WHERE MATCHID = " + matchID + " AND INNINGS = \"FIRST\"";

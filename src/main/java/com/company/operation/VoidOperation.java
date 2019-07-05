@@ -1,5 +1,5 @@
 package com.company.operation;
 
-public interface Operation {
+public interface VoidOperation {
     void perform();
 }

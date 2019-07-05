@@ -2,7 +2,7 @@ package com.company.crickbuzzpage;
 
 
 
-import com.company.operation.Operation;
+import com.company.operation.VoidOperation;
 import com.company.operation.OperationFactory;
 
 import javax.swing.JFrame;
@@ -81,7 +81,7 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
                     JOptionPane.showMessageDialog(null, "FILL MATCH ID AND SELECT WHETHER INNINGS OR OVERVIEW!");
                     operator = "-1";
                 }
-                Operation operation = operationFactory.getInstance(operator, matchID);
+                VoidOperation operation = operationFactory.getInstance(operator, matchID);
                 defaultFrame.setVisible(false);
                 operation.perform();
             }

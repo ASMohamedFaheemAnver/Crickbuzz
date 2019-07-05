@@ -5,7 +5,7 @@ import com.company.crickbuzzpage.InningsPage;
 
 import java.sql.ResultSet;
 
-public class SecondInningsOperation implements Operation{
+public class SecondInningsOperation implements VoidOperation{
 
     private ResultSet rssecondInningsBatting;
     private ResultSet rssecondInningsBowling;
