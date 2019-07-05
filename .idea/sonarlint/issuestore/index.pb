@@ -45,3 +45,5 @@ i
 9.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml,b/8/b8d96649614bd84192f3496ef7d33bab1d1e5ec1
 h
 8.idea/libraries/Maven__org_mockito_mockito_all_1_9_5.xml,9/3/93a76e5f60d6f1ad345e39fd865777ec4432faa7
+h
+8src/main/java/com/company/crickbuzzpage/InningsPage.java,3/8/38d5734a338303049007d3969f3b71fa7a9d6076

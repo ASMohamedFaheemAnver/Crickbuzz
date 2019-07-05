@@ -1,7 +1,7 @@
 package com.company.operation;
 
 import com.company.crickbuzzpage.CrickbuzzPage;
-import com.company.crickbuzzpage.SecondInningsPage;
+import com.company.crickbuzzpage.InningsPage;
 
 import java.sql.ResultSet;
 
@@ -21,7 +21,7 @@ public class SecondInningsOperation implements Operation{
 
     @Override
     public void perform() {
-        CrickbuzzPage secondInnings = new SecondInningsPage(rssecondInningsBatting, rssecondInningsBowling, titleOfsecondInnings, titleOfsecondInningsBatting, titleOfsecondInningsBowling, battingColumn, bowlingColoumn);
+        CrickbuzzPage secondInnings = new InningsPage(rssecondInningsBatting, rssecondInningsBowling, titleOfsecondInnings, titleOfsecondInningsBatting, titleOfsecondInningsBowling, battingColumn, bowlingColoumn);
         secondInnings.display();
     }
 }
