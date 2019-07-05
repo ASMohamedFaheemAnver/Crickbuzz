@@ -89,7 +89,9 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
                     ex.getMessage();
                 }
                 defaultFrame.setVisible(false);
-                operation.perform();
+                if (operation != null) {
+                    operation.perform();
+                }
             }
         });
     }

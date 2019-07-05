@@ -16,9 +16,9 @@ import java.sql.ResultSet;
 
 
 public class InningsPage implements CrickbuzzPage{
-    private JFrame InningsFrame = new JFrame();
-    private JTable Battingtable;
-    private JTable Bowlingtable;
+    JFrame inningsFrame = new JFrame();
+    JTable battingTable;
+    JTable bowlingTable;
 
     private JLabel titleofInnings = new JLabel();
     private JLabel titleofInningsBatting = new JLabel();
@@ -28,7 +28,7 @@ public class InningsPage implements CrickbuzzPage{
 
     private ResultSet rsInningsBatting;
     private ResultSet rsInningsBowling;
-    private JButton InningsDone;
+    JButton inningsDone;
 
 
 
@@ -48,28 +48,28 @@ public class InningsPage implements CrickbuzzPage{
     @Override
     public void display() {
 
-        InningsDone = new JButton("DONE");
+        inningsDone = new JButton("DONE");
 
 
         titleofInnings.setBounds(650, 0, 700, 100);
         titleofInningsBatting.setBounds(370, 150, 900, 40);
         titleofInningsBowling.setBounds(1290, 150, 900, 40);
-        InningsDone.setBounds(1690, 950, 100, 40);
+        inningsDone.setBounds(1690, 950, 100, 40);
 
         titleofInnings.setFont(new Font("Serif", Font.BOLD, 25));
         titleofInningsBatting.setFont(new Font(titleofInningsBatting.getFont().toString(), Font.BOLD, 20));
         titleofInningsBowling.setFont(new Font(titleofInningsBowling.getFont().toString(), Font.BOLD, 20));
 
-        InningsFrame.add(titleofInnings);
-        InningsFrame.add(titleofInningsBatting);
-        InningsFrame.add(titleofInningsBowling);
-        InningsFrame.add(InningsDone);
+        inningsFrame.add(titleofInnings);
+        inningsFrame.add(titleofInningsBatting);
+        inningsFrame.add(titleofInningsBowling);
+        inningsFrame.add(inningsDone);
 
-        Battingtable = new JTable();
-        Bowlingtable = new JTable();
+        battingTable = new JTable();
+        bowlingTable = new JTable();
 
 
-        Battingtable.setModel(new javax.swing.table.DefaultTableModel(
+        battingTable.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [][] {
                         {null, null, null, null, null, null},
                         {null, null, null, null, null, null},
@@ -78,7 +78,7 @@ public class InningsPage implements CrickbuzzPage{
                 null
         ));
 
-        Bowlingtable.setModel(new javax.swing.table.DefaultTableModel(
+        bowlingTable.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [][] {
                         {null, null, null, null, null, null},
                         {null, null, null, null, null, null},
@@ -87,11 +87,11 @@ public class InningsPage implements CrickbuzzPage{
                 null
         ));
 
-        Battingtable.setRowHeight(60);
-        Bowlingtable.setRowHeight(60);
+        battingTable.setRowHeight(60);
+        bowlingTable.setRowHeight(60);
 
-        Battingtable.setBounds(70, 200, 800, 622);
-        Bowlingtable.setBounds(990, 200, 800, 322);
+        battingTable.setBounds(70, 200, 800, 622);
+        bowlingTable.setBounds(990, 200, 800, 322);
 
         totalRun.setBounds(70, 800, 800, 100);
         totalWicket.setBounds(990, 500, 800, 100);
@@ -99,30 +99,30 @@ public class InningsPage implements CrickbuzzPage{
         totalRun.setFont(new Font(titleofInningsBatting.getFont().toString(), Font.BOLD, 20));
         totalWicket.setFont(new Font(titleofInningsBatting.getFont().toString(), Font.BOLD, 20));
 
-        InningsFrame.add(totalRun);
-        InningsFrame.add(totalWicket);
+        inningsFrame.add(totalRun);
+        inningsFrame.add(totalWicket);
 
 
-        JScrollPane sp = new JScrollPane(Battingtable);
-        sp.setBounds(Battingtable.getBounds());
-        InningsFrame.add(sp);
+        JScrollPane sp = new JScrollPane(battingTable);
+        sp.setBounds(battingTable.getBounds());
+        inningsFrame.add(sp);
 
-        JScrollPane sp2 = new JScrollPane(Bowlingtable);
-        sp2.setBounds(Bowlingtable.getBounds());
-        InningsFrame.add(sp2);
+        JScrollPane sp2 = new JScrollPane(bowlingTable);
+        sp2.setBounds(bowlingTable.getBounds());
+        inningsFrame.add(sp2);
 
-        InningsFrame.setSize(1920, 1050);
-        InningsFrame.setLayout(null);
-        InningsFrame.setVisible(true);
+        inningsFrame.setSize(1920, 1050);
+        inningsFrame.setLayout(null);
+        inningsFrame.setVisible(true);
 
-        Battingtable.setModel(DbUtils.resultSetToTableModel(rsInningsBatting));
-        Bowlingtable.setModel(DbUtils.resultSetToTableModel(rsInningsBowling));
+        battingTable.setModel(DbUtils.resultSetToTableModel(rsInningsBatting));
+        bowlingTable.setModel(DbUtils.resultSetToTableModel(rsInningsBowling));
 
-        InningsDone.addActionListener(new ActionListener() {
+        inningsDone.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 CrickbuzzPage defaultPage = new DefaultCrickbuzzPage();
-                InningsFrame.setVisible(false);
+                inningsFrame.setVisible(false);
                 defaultPage.display();
             }
         });
