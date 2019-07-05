@@ -16,39 +16,37 @@ import java.sql.ResultSet;
 
 
 public class InningsPage implements CrickbuzzPage{
-    JFrame InningsFrame = new JFrame();
-    JTable Battingtable;
-    JTable Bowlingtable;
+    private JFrame InningsFrame = new JFrame();
+    private JTable Battingtable;
+    private JTable Bowlingtable;
 
     private JLabel titleofInnings = new JLabel();
     private JLabel titleofInningsBatting = new JLabel();
     private JLabel titleofInningsBowling = new JLabel();
-    ResultSet rsInningsBatting;
-    ResultSet rsInningsBowling;
-    JButton InningsDone;
+    private JLabel totalRun = new JLabel();
+    private JLabel totalWicket = new JLabel();
 
-    private String[] battingColumn;
-    private String[] bowlingColoumn;
+    private ResultSet rsInningsBatting;
+    private ResultSet rsInningsBowling;
+    private JButton InningsDone;
+
 
 
 
     public InningsPage(ResultSet rsInningsBatting, ResultSet rsInningsBowling, String titleofInnings,
-                       String titleofInningsBatting, String titleofInningsBowling, String[] battingColumn, String[] bowlingColoumn){
+                       String titleofInningsBatting, String titleofInningsBowling, int totalRun, int totalWicket){
         this.rsInningsBatting = rsInningsBatting;
         this.rsInningsBowling = rsInningsBowling;
         this.titleofInnings.setText(titleofInnings);
         this.titleofInningsBatting.setText(titleofInningsBatting);
         this.titleofInningsBowling.setText(titleofInningsBowling);
+        this.totalRun.setText("TOTAL RUN IS : " + totalRun);
+        this.totalWicket.setText("TOTAL WICKET IS : " + totalWicket);
     }
 
 
     @Override
     public void display() {
-        /*
-        titleofInnings.setText(" INNINGS SCORECARD!");
-        titleofInningsBatting.setText(" INNINGS BATTING!");
-        titleofInningsBowling.setText(" INNINGS BOWLING!");
-         */
 
         InningsDone = new JButton("DONE");
 
@@ -70,10 +68,6 @@ public class InningsPage implements CrickbuzzPage{
         Battingtable = new JTable();
         Bowlingtable = new JTable();
 
-        /*
-        String[] battingColumn = {"NAME","RUN","BALL", "SIX", "FOUR", "S/R"};
-        String[] bowlingColoumn = {"NAME", "OVER", "MAIDEN", "RUN", "WICKET", "ECON"};
-         */
 
         Battingtable.setModel(new javax.swing.table.DefaultTableModel(
                 new Object [][] {
@@ -81,7 +75,7 @@ public class InningsPage implements CrickbuzzPage{
                         {null, null, null, null, null, null},
                         {null, null, null, null, null, null}
                 },
-                battingColumn
+                null
         ));
 
         Bowlingtable.setModel(new javax.swing.table.DefaultTableModel(
@@ -90,7 +84,7 @@ public class InningsPage implements CrickbuzzPage{
                         {null, null, null, null, null, null},
                         {null, null, null, null, null, null}
                 },
-                bowlingColoumn
+                null
         ));
 
         Battingtable.setRowHeight(60);
@@ -98,6 +92,15 @@ public class InningsPage implements CrickbuzzPage{
 
         Battingtable.setBounds(70, 200, 800, 622);
         Bowlingtable.setBounds(990, 200, 800, 322);
+
+        totalRun.setBounds(70, 800, 800, 100);
+        totalWicket.setBounds(990, 500, 800, 100);
+
+        totalRun.setFont(new Font(titleofInningsBatting.getFont().toString(), Font.BOLD, 20));
+        totalWicket.setFont(new Font(titleofInningsBatting.getFont().toString(), Font.BOLD, 20));
+
+        InningsFrame.add(totalRun);
+        InningsFrame.add(totalWicket);
 
 
         JScrollPane sp = new JScrollPane(Battingtable);

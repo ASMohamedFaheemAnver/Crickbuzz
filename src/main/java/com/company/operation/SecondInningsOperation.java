@@ -9,19 +9,22 @@ public class SecondInningsOperation implements VoidOperation{
 
     private ResultSet rssecondInningsBatting;
     private ResultSet rssecondInningsBowling;
-    private String[] battingColumn = {"","","", "", "", ""};
-    private String[] bowlingColoumn = {"", "", "", "", "", ""};
     private String titleOfsecondInnings = "SECOND INNINGS SCORECARD!";
     private String titleOfsecondInningsBatting = "SECOND INNINGS BATTING!";
     private String titleOfsecondInningsBowling = "SECOND INNINGS BOWLING!";
-    public SecondInningsOperation(ResultSet rssecondInningsBatting, ResultSet rssecondInningsBowling){
+    private int totalRun;
+    private int totalWicket;
+
+    public SecondInningsOperation(ResultSet rssecondInningsBatting, ResultSet rssecondInningsBowling, int totalRun, int totalWicket){
         this.rssecondInningsBatting = rssecondInningsBatting;
         this.rssecondInningsBowling = rssecondInningsBowling;
+        this.totalRun = totalRun;
+        this.totalWicket = totalWicket;
     }
 
     @Override
     public void perform() {
-        CrickbuzzPage secondInnings = new InningsPage(rssecondInningsBatting, rssecondInningsBowling, titleOfsecondInnings, titleOfsecondInningsBatting, titleOfsecondInningsBowling, battingColumn, bowlingColoumn);
+        CrickbuzzPage secondInnings = new InningsPage(rssecondInningsBatting, rssecondInningsBowling, titleOfsecondInnings, titleOfsecondInningsBatting, titleOfsecondInningsBowling, totalRun, totalWicket);
         secondInnings.display();
     }
 }

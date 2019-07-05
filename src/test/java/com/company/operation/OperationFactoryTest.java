@@ -2,6 +2,8 @@ package com.company.operation;
 
 import org.junit.Test;
 
+import java.sql.SQLException;
+
 import static org.hamcrest.CoreMatchers.instanceOf;
 import static org.hamcrest.MatcherAssert.assertThat;
 
@@ -9,7 +11,7 @@ public class OperationFactoryTest {
     String operator;
     int matchID;
     @Test
-    public void shouldLaunchDefaultPageOperation(){
+    public void shouldLaunchDefaultPageOperation() throws SQLException {
         OperationFactory operationFactory = new OperationFactory();
         operator = "-1";
         matchID = 1;
@@ -19,7 +21,7 @@ public class OperationFactoryTest {
     }
 
     @Test
-    public void shouldLaunchFirstInningsPageOperation(){
+    public void shouldLaunchFirstInningsPageOperation() throws SQLException {
         OperationFactory operationFactory = new OperationFactory();
         operator = "First Innings";
         matchID = 1;
@@ -29,7 +31,7 @@ public class OperationFactoryTest {
     }
 
     @Test
-    public void shouldLaunchSecondInningsPageOperation(){
+    public void shouldLaunchSecondInningsPageOperation() throws SQLException {
         OperationFactory operationFactory = new OperationFactory();
         operator = "Second Innings";
         matchID = 1;
@@ -39,7 +41,7 @@ public class OperationFactoryTest {
     }
 
     @Test
-    public void shouldLaunchOverviewInningsPageOperation(){
+    public void shouldLaunchOverviewInningsPageOperation() throws SQLException {
         OperationFactory operationFactory = new OperationFactory();
         operator = "Innings Overview";
         matchID = 1;

@@ -16,6 +16,7 @@ import javax.swing.JOptionPane;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class DefaultCrickbuzzPage implements CrickbuzzPage{
     final JButton searchButton = new JButton("Search");
@@ -81,7 +82,12 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
                     JOptionPane.showMessageDialog(null, "FILL MATCH ID AND SELECT WHETHER INNINGS OR OVERVIEW!");
                     operator = "-1";
                 }
-                VoidOperation operation = operationFactory.getInstance(operator, matchID);
+                VoidOperation operation = null;
+                try {
+                    operation = operationFactory.getInstance(operator, matchID);
+                } catch (SQLException ex) {
+                    ex.getMessage();
+                }
                 defaultFrame.setVisible(false);
                 operation.perform();
             }
