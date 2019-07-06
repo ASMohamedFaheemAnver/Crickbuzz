@@ -8,18 +8,18 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CalculateTotalOperation implements IntOperation{
-    private int totalRun = 0;
+    private int totalResult = 0;
     @Override
     public int perform(String qr, int choice) throws SQLException {
         Repository total = new DatabaseRepository();
         ResultSet temp = total.read(qr);
         while (temp.next()){
             if(choice==1){
-                totalRun += Integer.parseInt(temp.getString("RUN"));
+                totalResult += Integer.parseInt(temp.getString("RUN"));
             }else if (choice==2){
-                totalRun += Integer.parseInt(temp.getString("WICKET"));
+                totalResult += Integer.parseInt(temp.getString("WICKET"));
             }
         }
-        return totalRun;
+        return totalResult;
     }
 }

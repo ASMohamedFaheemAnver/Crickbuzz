@@ -58,6 +58,7 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
         selectionInnings.add(firstInnings);
         selectionInnings.add(secondInnings);
         selectionInnings.add(inningsOverview);
+
         defaultFrame.add(firstInnings);
         defaultFrame.add(secondInnings);
         defaultFrame.add(inningsOverview);
