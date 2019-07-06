@@ -1,13 +1,0 @@
-
-Msquid:S00108$")Either remove or fill this block of code.(³°Â¥üÿÿÿÿ8Ö—‰ãº-
-gsquid:S2583$"DChange this condition so that it does not always evaluate to "false"(³°Â¥üÿÿÿÿ8Ö—‰ãº-
-Hsquid:S00108")Either remove or fill this block of code.(¸ô¾Ï8€ªöâº-
-˜squid:S2159"zRemove this call to "equals"; comparisons against null always return false; consider using '== null' to check for nullity.(¸ô¾Ï8·Ôıâº-
-˜squid:S2159"zRemove this call to "equals"; comparisons against null always return false; consider using '== null' to check for nullity.(¸ô¾Ï8‘—‚ãº-
-squid:S2159$"zRemove this call to "equals"; comparisons against null always return false; consider using '== null' to check for nullity.(³°Â¥üÿÿÿÿ8Ö—‰ãº-
-e$squid:AssignmentInSubExpressionCheck".Extract the assignment out of this expression.(¸ô¾Ï8‘—‚ãº-
-j$squid:AssignmentInSubExpressionCheck$".Extract the assignment out of this expression.(³°Â¥üÿÿÿÿ8Ö—‰ãº-
-bsquid:S2583"DChange this condition so that it does not always evaluate to "false"(¸ô¾Ï8‘—‚ãº-
-e$squid:AssignmentInSubExpressionCheck".Extract the assignment out of this expression.(¸ô¾Ï8™×äâº-
-Hsquid:S00108")Either remove or fill this block of code.(¸ô¾Ï8‘—‚ãº-
-bsquid:S2583"DChange this condition so that it does not always evaluate to "false"(¸ô¾Ï8·Ôıâº-

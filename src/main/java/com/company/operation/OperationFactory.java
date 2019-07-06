@@ -28,6 +28,8 @@ public class OperationFactory{
                 totalRun = rtotalRun.perform(qr, 1);
                 totalWicket = rtotalWicket.perform(qr2, 2);
                 operation = new FirstInningsOperation(rsInningsBatting, rsInningsBowling, totalRun, totalWicket);
+            }else {
+                operation = new DefaultOperation();
             }
         }else if("Second Innings".equals(operator)){
             String qr = "SELECT NAME, RUN, BALL, FOUR, SIX, SR FROM `MATCHBATTING` WHERE MATCHID = " + matchID + " AND INNINGS = \"SECOND\"";
@@ -37,6 +39,8 @@ public class OperationFactory{
                 totalRun = rtotalRun.perform(qr, 1);
                 totalWicket = rtotalWicket.perform(qr2, 2);
                 operation = new SecondInningsOperation(rsInningsBatting, rsInningsBowling, totalRun, totalWicket);
+            }else {
+                operation = new DefaultOperation();
             }
         }else if("Innings Overview".equals(operator)){
             String qr = "SELECT TEAM, OVERVIEW FROM `MATCHOVERVIEW` WHERE MATCHID = " + matchID;

@@ -17,8 +17,6 @@ j
 pom.xml,4/4/442292b8a7efeabbe4cc176709b833b1792140ec
 q
 Asrc/main/java/com/company/operation/OverviewInningsOperation.java,0/a/0a9d83614ea7f135179330f298287ba604e65aed
-b
-2src/main/java/com/company/operation/Operation.java,b/e/bee6a49fee04637c94ef87e44f1b21e06238feea
 m
 =src/test/java/com/company/operation/OperationFactoryTest.java,b/4/b44bac34ccf0aecfdca4ce4bd28b5c8584aeccfd
 X
@@ -33,12 +31,8 @@ i
 9src/main/java/com/company/operation/DefaultOperation.java,f/e/fe2610530cd89c38ab0eaa75b3c21871fbbb1711
 n
 >src/main/java/com/company/operation/FirstInningsOperation.java,f/e/fed301a3f74f94fcbea7f3212ad4579355c73960
-m
-=src/main/java/com/company/crickbuzzpage/FirstInningsPage.java,f/9/f92399d57fc918dce87f31b49a86ed7080b85009
 p
 @src/main/java/com/company/crickbuzzpage/OverviewInningsPage.java,b/a/ba619b26764822dbd077614f0e8fc88d76fc18d2
-n
->src/main/java/com/company/crickbuzzpage/SecondInningsPage.java,4/3/43292cc11163e34b494a4ca82b7c77b586972951
 [
 +.idea/libraries/Maven__junit_junit_4_12.xml,a/f/afa6ca72908af2e838d0cb108eb24f143bc62da7
 i
@@ -47,3 +41,9 @@ h
 8.idea/libraries/Maven__org_mockito_mockito_all_1_9_5.xml,9/3/93a76e5f60d6f1ad345e39fd865777ec4432faa7
 h
 8src/main/java/com/company/crickbuzzpage/InningsPage.java,3/8/38d5734a338303049007d3969f3b71fa7a9d6076
+f
+6src/main/java/com/company/operation/VoidOperation.java,3/c/3c424d7736742a133671dc95aa8d27b852d3c090
+p
+@src/main/java/com/company/operation/CalculateTotalOperation.java,9/3/9341bbb7b35b2a8f6b4de2226bf42e7c9d6c75e0
+e
+5src/main/java/com/company/operation/IntOperation.java,e/1/e1e093dccd1a3e50f4a3e81584ff4f2f26195200
