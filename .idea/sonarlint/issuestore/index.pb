@@ -47,3 +47,13 @@ p
 @src/main/java/com/company/operation/CalculateTotalOperation.java,9/3/9341bbb7b35b2a8f6b4de2226bf42e7c9d6c75e0
 e
 5src/main/java/com/company/operation/IntOperation.java,e/1/e1e093dccd1a3e50f4a3e81584ff4f2f26195200
+m
+=src/test/java/com/company/operation/DefaultOperationTest.java,e/b/eb461ed74436d0338b6ea5c886f771b54a217335
+r
+Bsrc/test/java/com/company/operation/FirstInningsOperationTest.java,9/4/94f9b00bd6fcd310453cbc3fd6a9727b1323ddc5
+u
+Esrc/test/java/com/company/operation/OverviewInningsOperationTest.java,2/c/2c63170b3c7875a72c225754f6a8f40708b637ab
+t
+Dsrc/test/java/com/company/operation/CalculateTotalOperationTest.java,d/0/d07cffee3642cecc7f5c100ee5acca2515dd8f63
+s
+Csrc/test/java/com/company/operation/SecondInningsOperationTest.java,3/2/326d7e3d623ee3640c9a885ddafca7f7b60e5e8b

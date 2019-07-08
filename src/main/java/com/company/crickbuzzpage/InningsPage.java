@@ -120,7 +120,7 @@ public class InningsPage implements CrickbuzzPage{
 
         inningsDone.addActionListener(new ActionListener() {
             @Override
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent actionEvent) {
                 CrickbuzzPage defaultPage = new DefaultCrickbuzzPage();
                 inningsFrame.setVisible(false);
                 defaultPage.display();
