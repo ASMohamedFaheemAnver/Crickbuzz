@@ -32,6 +32,7 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
     static JLabel userGreeting = new JLabel();
     static JLabel searchInstruction = new JLabel();
     static JTextField searchText = new JTextField("");
+    private String fontx = "Serif";
 
 
     @Override
@@ -52,15 +53,15 @@ public class DefaultCrickbuzzPage implements CrickbuzzPage{
         firstInnings.setActionCommand("First Innings");
         secondInnings.setActionCommand("Second Innings");
 
-        userGreeting.setFont(new Font("Serif", Font.BOLD, 25));
+        userGreeting.setFont(new Font(fontx, Font.BOLD, 25));
 
 
-        searchInstruction.setFont(new Font("Serif", Font.BOLD, 15));
-        searchText.setFont(new Font("Serif", Font.BOLD, 15));
-        searchButton.setFont(new Font("Serif", Font.BOLD, 15));
-        firstInnings.setFont(new Font("Serif", Font.BOLD, 15));
-        secondInnings.setFont(new Font("Serif", Font.BOLD, 15));
-        inningsOverview.setFont(new Font("Serif", Font.BOLD, 15));
+        searchInstruction.setFont(new Font(fontx, Font.BOLD, 15));
+        searchText.setFont(new Font(fontx, Font.BOLD, 15));
+        searchButton.setFont(new Font(fontx, Font.BOLD, 15));
+        firstInnings.setFont(new Font(fontx, Font.BOLD, 15));
+        secondInnings.setFont(new Font(fontx, Font.BOLD, 15));
+        inningsOverview.setFont(new Font(fontx, Font.BOLD, 15));
 
         selectionInnings.add(firstInnings);
         selectionInnings.add(secondInnings);

@@ -7,7 +7,7 @@ import com.company.crickbuzzpage.DefaultCrickbuzzPage;
 public class DefaultOperation implements VoidOperation{
     @Override
     public void perform() {
-        CrickbuzzPage firstInnings = new DefaultCrickbuzzPage();
-        firstInnings.display();
+        CrickbuzzPage page = new DefaultCrickbuzzPage();
+        page.display();
     }
 }

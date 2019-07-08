@@ -57,3 +57,5 @@ t
 Dsrc/test/java/com/company/operation/CalculateTotalOperationTest.java,d/0/d07cffee3642cecc7f5c100ee5acca2515dd8f63
 s
 Csrc/test/java/com/company/operation/SecondInningsOperationTest.java,3/2/326d7e3d623ee3640c9a885ddafca7f7b60e5e8b
+>
+Crickbuzz .sql,4/6/46fd285f0ea6e52022d50d6a7f558ac2b1d2bf25
