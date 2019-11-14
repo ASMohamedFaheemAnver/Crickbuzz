@@ -10,8 +10,6 @@ import javax.swing.JScrollPane;
 
 
 import java.awt.Font;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 
@@ -118,13 +116,10 @@ public class InningsPage implements CrickbuzzPage{
         battingTable.setModel(DbUtils.resultSetToTableModel(rsInningsBatting));
         bowlingTable.setModel(DbUtils.resultSetToTableModel(rsInningsBowling));
 
-        inningsDone.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                CrickbuzzPage defaultPage = new DefaultCrickbuzzPage();
-                inningsFrame.setVisible(false);
-                defaultPage.display();
-            }
+        inningsDone.addActionListener(actionEvent -> {
+            CrickbuzzPage defaultPage = new DefaultCrickbuzzPage();
+            inningsFrame.setVisible(false);
+            defaultPage.display();
         });
     }
 

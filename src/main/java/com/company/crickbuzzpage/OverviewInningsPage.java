@@ -64,15 +64,11 @@ public class OverviewInningsPage implements CrickbuzzPage{
         overviewInningsFrame.setLayout(null);
         overviewInningsFrame.setVisible(true);
 
-        overviewInningsDone.addActionListener(new ActionListener() {
+        overviewInningsDone.addActionListener(e -> {
+            CrickbuzzPage defaultPage = new DefaultCrickbuzzPage();
+            overviewInningsFrame.setVisible(false);
+            defaultPage.display();
 
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                CrickbuzzPage defaultPage = new DefaultCrickbuzzPage();
-                overviewInningsFrame.setVisible(false);
-                defaultPage.display();
-
-            }
         });
     }
 }
